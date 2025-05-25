@@ -7,6 +7,8 @@ from utilities.customLogger import LogGen
 class Test_login:
     baseURL = ReadConfig.getApplicationURL()
     logger = LogGen.loggen()
+
+    @pytest.mark.sanity
     def test_valid_login(self, driver):
         self.driver = driver
         self.driver.get(self.baseURL)

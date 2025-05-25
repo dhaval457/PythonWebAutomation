@@ -6,6 +6,8 @@ from selenium.webdriver.firefox.service import Service as FirefoxService
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from selenium.webdriver.edge.service import Service as EdgeService
 from selenium.webdriver.edge.options import Options as EdgeOptions
+import os
+from datetime import datetime
 
 def pytest_addoption(parser):
     parser.addoption("--browser", action="store", default="chrome", help="Browser to run tests against (chrome, firefox, edge)")
@@ -51,6 +53,23 @@ def driver(request):
 
     yield driver
     driver.quit()
+
+def pytest_configure(config):
+    config._metadata['Project Name'] = 'SauceDemo'
+    config._metadata['Module Name'] = 'Login'
+    config._metadata['Tester'] = 'dhaval'
+
+@pytest.hookimpl(tryfirst=True)
+def pytest_configure(config):
+    config.option.htmlpath = os.path.abspath(os.curdir) + "\\reports\\" + datetime.now().strftime("%d-%m-%Y_%H-%M-%S") + ".html"
+
+
+
+@pytest.mark.optionalhook
+def pytest_metadata(metadata):
+    metadata.pop("JAVA_HOME", None)
+    metadata.pop("Plugins", None)
+
 
 """As of Selenium v4.6.0, Selenium Manager was introduced — a built-in feature that:
 
