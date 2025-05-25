@@ -48,3 +48,15 @@ class Test_login:
         print("Error message is: ", error_message)
         assert error_message == "Epic sadface: Password is required"
         self.driver.save_screenshot(os.path.abspath(os.curdir)+"\\screenshot\\"+"test_only_username_login.png")
+
+    def test_only_password_Login(self,driver):
+        self.driver = driver
+        self.driver.get("https://www.saucedemo.com/v1/index.html")
+        self.driver.maximize_window()
+        self.lp = LoginPage(driver)
+        self.lp.setPassword("secret")
+        self.lp.clickLogin()
+        error_message = self.lp.getErrorMessageCSS()
+        print("Error message is: ", error_message)
+        assert error_message == "Epic sadface: Username is required"
+        

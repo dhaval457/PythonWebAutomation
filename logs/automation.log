@@ -834,3 +834,52 @@
 05/25/2025 09:30:32 AM: DEBUG: DELETE http://localhost:58724/session/25ae821e6f1d97168bdef270a80bcf0a {}
 05/25/2025 09:30:33 AM: DEBUG: Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
 05/25/2025 09:30:33 AM: DEBUG: Finished Request
+05/25/2025 10:42:19 AM: DEBUG: Selenium Manager binary found at: D:\Languages\Python\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe
+05/25/2025 10:42:19 AM: DEBUG: Executing process: D:\Languages\Python\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --debug --language-binding python --output json
+05/25/2025 10:42:21 AM: DEBUG: Sending stats to Plausible: Props { browser: "chrome", browser_version: "", os: "windows", arch: "amd64", lang: "python", selenium_version: "4.26" }
+05/25/2025 10:42:21 AM: DEBUG: chromedriver not found in PATH
+05/25/2025 10:42:21 AM: DEBUG: chrome detected at C:\Program Files\Google\Chrome\Application\chrome.exe
+05/25/2025 10:42:21 AM: DEBUG: Running command: wmic datafile where name='C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe' get Version /value
+05/25/2025 10:42:21 AM: DEBUG: Output: "\r\r\n\r\r\nVersion=136.0.7103.114\r\r\n\r\r\n\r\r\n\r"
+05/25/2025 10:42:21 AM: DEBUG: Detected browser: chrome 136.0.7103.114
+05/25/2025 10:42:21 AM: DEBUG: Discovering versions from https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json
+05/25/2025 10:42:21 AM: DEBUG: Required driver: chromedriver 136.0.7103.113
+05/25/2025 10:42:21 AM: DEBUG: chromedriver 136.0.7103.113 already in the cache
+05/25/2025 10:42:21 AM: DEBUG: Driver path: C:\Users\Admin\.cache\selenium\chromedriver\win64\136.0.7103.113\chromedriver.exe
+05/25/2025 10:42:21 AM: DEBUG: Browser path: C:\Program Files\Google\Chrome\Application\chrome.exe
+05/25/2025 10:42:21 AM: DEBUG: Started executable: `C:\Users\Admin\.cache\selenium\chromedriver\win64\136.0.7103.113\chromedriver.exe` in a child process with pid: 3888 using 0 to output -3
+05/25/2025 10:42:22 AM: DEBUG: POST http://localhost:59327/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'browserVersion': None, 'goog:chromeOptions': {'extensions': [], 'binary': 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', 'args': ['--start-maximized']}}}}
+05/25/2025 10:42:23 AM: DEBUG: Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"136.0.7103.114","chrome":{"chromedriverVersion":"136.0.7103.113 (76fa3c1782406c63308c70b54f228fd39c7aaa71-refs/branch-heads/7103_108@{#3})","userDataDir":"C:\\Users\\Admin\\AppData\\Local\\Temp\\scoped_dir3888_1698396416"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:59333"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"8659976a17f240dc562f9ca59cd2a048"}} | headers=HTTPHeaderDict({'Content-Length': '884', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+05/25/2025 10:42:23 AM: DEBUG: Finished Request
+05/25/2025 10:42:23 AM: DEBUG: POST http://localhost:59327/session/8659976a17f240dc562f9ca59cd2a048/url {'url': 'https://www.saucedemo.com/v1/index.html'}
+05/25/2025 10:42:24 AM: DEBUG: Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+05/25/2025 10:42:24 AM: DEBUG: Finished Request
+05/25/2025 10:42:24 AM: DEBUG: POST http://localhost:59327/session/8659976a17f240dc562f9ca59cd2a048/window/maximize {}
+05/25/2025 10:42:24 AM: DEBUG: Remote response: status=200 | data={"value":{"height":744,"width":1382,"x":-8,"y":-8}} | headers=HTTPHeaderDict({'Content-Length': '51', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+05/25/2025 10:42:24 AM: DEBUG: Finished Request
+05/25/2025 10:42:24 AM: INFO: website opened
+05/25/2025 10:42:24 AM: DEBUG: POST http://localhost:59327/session/8659976a17f240dc562f9ca59cd2a048/element {'using': 'css selector', 'value': '[id="user-name"]'}
+05/25/2025 10:42:24 AM: DEBUG: Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.5E8FC950BD57460CD5F22AE00828A1D3.d.A71086CF07C876CC0657476E80077C77.e.5"}} | headers=HTTPHeaderDict({'Content-Length': '125', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+05/25/2025 10:42:24 AM: DEBUG: Finished Request
+05/25/2025 10:42:24 AM: DEBUG: POST http://localhost:59327/session/8659976a17f240dc562f9ca59cd2a048/element/f.5E8FC950BD57460CD5F22AE00828A1D3.d.A71086CF07C876CC0657476E80077C77.e.5/value {'text': 'standard_user', 'value': ['s', 't', 'a', 'n', 'd', 'a', 'r', 'd', '_', 'u', 's', 'e', 'r']}
+05/25/2025 10:42:24 AM: DEBUG: Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+05/25/2025 10:42:24 AM: DEBUG: Finished Request
+05/25/2025 10:42:24 AM: DEBUG: POST http://localhost:59327/session/8659976a17f240dc562f9ca59cd2a048/element {'using': 'css selector', 'value': '[id="password"]'}
+05/25/2025 10:42:24 AM: DEBUG: Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.5E8FC950BD57460CD5F22AE00828A1D3.d.A71086CF07C876CC0657476E80077C77.e.6"}} | headers=HTTPHeaderDict({'Content-Length': '125', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+05/25/2025 10:42:24 AM: DEBUG: Finished Request
+05/25/2025 10:42:24 AM: DEBUG: POST http://localhost:59327/session/8659976a17f240dc562f9ca59cd2a048/element/f.5E8FC950BD57460CD5F22AE00828A1D3.d.A71086CF07C876CC0657476E80077C77.e.6/value {'text': 'secret_sauce', 'value': ['s', 'e', 'c', 'r', 'e', 't', '_', 's', 'a', 'u', 'c', 'e']}
+05/25/2025 10:42:24 AM: DEBUG: Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+05/25/2025 10:42:24 AM: DEBUG: Finished Request
+05/25/2025 10:42:24 AM: DEBUG: POST http://localhost:59327/session/8659976a17f240dc562f9ca59cd2a048/element {'using': 'css selector', 'value': '[id="login-button"]'}
+05/25/2025 10:42:24 AM: DEBUG: Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.5E8FC950BD57460CD5F22AE00828A1D3.d.A71086CF07C876CC0657476E80077C77.e.7"}} | headers=HTTPHeaderDict({'Content-Length': '125', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+05/25/2025 10:42:24 AM: DEBUG: Finished Request
+05/25/2025 10:42:24 AM: DEBUG: POST http://localhost:59327/session/8659976a17f240dc562f9ca59cd2a048/element/f.5E8FC950BD57460CD5F22AE00828A1D3.d.A71086CF07C876CC0657476E80077C77.e.7/click {}
+05/25/2025 10:42:25 AM: DEBUG: Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+05/25/2025 10:42:25 AM: DEBUG: Finished Request
+05/25/2025 10:42:25 AM: INFO: login button clicked
+05/25/2025 10:42:25 AM: DEBUG: GET http://localhost:59327/session/8659976a17f240dc562f9ca59cd2a048/url {}
+05/25/2025 10:42:25 AM: DEBUG: Remote response: status=200 | data={"value":"https://www.saucedemo.com/v1/inventory.html"} | headers=HTTPHeaderDict({'Content-Length': '55', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+05/25/2025 10:42:25 AM: DEBUG: Finished Request
+05/25/2025 10:42:25 AM: DEBUG: DELETE http://localhost:59327/session/8659976a17f240dc562f9ca59cd2a048 {}
+05/25/2025 10:42:26 AM: DEBUG: Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+05/25/2025 10:42:26 AM: DEBUG: Finished Request
