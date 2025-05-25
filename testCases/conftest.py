@@ -8,6 +8,7 @@ from selenium.webdriver.edge.service import Service as EdgeService
 from selenium.webdriver.edge.options import Options as EdgeOptions
 import os
 from datetime import datetime
+from selenium.webdriver.chrome.options import Options
 
 def pytest_addoption(parser):
     parser.addoption("--browser", action="store", default="chrome", help="Browser to run tests against (chrome, firefox, edge)")
@@ -27,6 +28,12 @@ def driver(request):
     if browser == "chrome":
         options = ChromeOptions()
         options.add_argument("--start-maximized")
+        options.add_argument("--disable-save-password-bubble")
+        options.add_argument("--incognito")
+        options.add_experimental_option("prefs", {
+        "credentials_enable_service": False,
+        "profile.password_manager_enabled": False
+        })
         service = ChromeService()
         driver = webdriver.Chrome(service=service, options=options)
     
